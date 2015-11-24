@@ -53,8 +53,8 @@ SFEItoIntegral = function(dt       = 0.0001,  # delta t, determines the length o
   
   # calculation of the Wiener process
   w 	= matrix(runif(n), n, 1)                   # defines a vector w which contains values randomly choosen greater or smaller than zero
-  w 	= 2 * (w > 0.5) - 1		                   # rescales the vector w to -1 or 1
-  dx  = c * sqrt(dt)                               # defines the scaling factor dx
+  w 	= 2 * (w > 0.5) - 1		                     # rescales the vector w to -1 or 1
+  dx  = c * sqrt(dt)                            # defines the scaling factor dx
   w 	= w * dx                                   
   w 	= apply(w, MARGIN = 2, FUN = cumsum)
   
